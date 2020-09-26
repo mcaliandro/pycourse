@@ -12,10 +12,10 @@ z = 5j      # complex (put the j after the real part)
 print("x is an integer number:", x)
 print("y is a float number:", y)
 
-# in case you have to print multiple values in output, you can use the format()
-# function on a string. you should use some placeholders {n} in the string to specify
-# where to put the values, you can order them by specifying the position that 
-# corresponds to the order of values reported inside format(), the position starts from 0
+# in case you have to print multiple values in output, you can use the format() function
+# on a string. you should use some placeholders (in the form "{n}") in the string to specify
+# where to put the values, you can order them by specifying the position that corresponds 
+# to the order of values reported inside format(), the position starts from 0
 # in this case, z.real goes to position 0, z.imag in position 1
 print("z is a complex number, Real: {0}, Imag: {1}".format(z.real, z.imag))
 
@@ -28,14 +28,13 @@ print("z is a complex number, Real: {}, Imag: {}".format(z.real, z.imag))
 a = True
 b = False
 
-print("a={}, b={}", format(a, b))
+print("a={}, b={}".format(a, b))
 print("a AND b = ", (a and b))
 print("a OR b = ", (a or b))
 print("a AND (not b)", (a and (not b)))
 
 
 ## String variables
-
 name = ""           # empty string
 greeting = "Hello," # initialized string
 

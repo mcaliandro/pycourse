@@ -10,26 +10,27 @@ import argparse
 
 # in Python, a function called main is simply a function
 # no special behaviors like C, C++ or Java
-def main(op, fname):
+def main(filename, operation):
     numbers = []
     try:
-        f = open(fname, "r")
+        f = open(filename, "r")
         numbers = [int(line.rstrip('\n')) for line in f]
     except:
         # no particular exception is specified
-        print("An error occurred while accessing the file", fname)
+        print("An error occurred while accessing the file", filename)
     finally:
+        # finally is the last step to perform either an exception occurs or not
         # after having handled the error, just close the file 
         f.close()
 
     # check if list is not empty
     if numbers:
-        if op == "sum":
+        if operation == "sum":
             print("Sum: ", sum(numbers))
-        elif op == "avg":
+        elif operation == "avg":
             print("Average: ", sum(numbers)/len(numbers))
         else:
-            print("Invalid operation", op)
+            print("Invalid operation", operation)
     else:
         print("Nothing happened: the list is empty")
 
@@ -38,10 +39,10 @@ parser = argparse.ArgumentParser(description="Calculate average and sum of a lis
 
 # add arguments -o and -f
 parser.add_argument("-o", dest="op", required=True, help="Syntax: -o [avg|sum]")
-parser.add_argument("-f", dest="fname", required=True, help="Synax: -f [filename]")
+parser.add_argument("-f", dest="fname", required=True, help="Syntax: -f [filename]")
 
 # parse the arguments
 args = parser.parse_args()
 
 # call main function
-main(args)
+main(args.fname, args.op)

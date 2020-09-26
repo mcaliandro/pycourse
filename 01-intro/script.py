@@ -8,7 +8,7 @@
 #      a Python console to run Python scripts), unfortunately this doesn't work 
 #      in Windows, unless you have the Bash shell installed.
 
-# a huge string can be specified within triple-" and triple-" caracters
+# a huge string can be specified within triple-" and triple-" characters
 
 message = """
 Welcome to this introduction to Python

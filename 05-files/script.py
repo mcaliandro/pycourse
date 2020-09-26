@@ -9,10 +9,10 @@ from random import randint
 
 fname = "numbers.txt"
 
-# this feature of Python is called list comprehension
-# range(1000) returns a list of integers within [0, 1000] range
-numbers = [randint(0, 20) for i in range(1000)]
-print("Numbers: ", numbers)
+# use list comprehension to generate 100 number by using range()
+# each one is a random integer within the range (0, 20) by using randint()
+numbers = [randint(0, 20) for i in range(100)]
+print("Numbers:", numbers)
 
 # write the numbers list into a file
 f = open(fname, "w")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# this script uses the concepts explained in 05-dict
+# this script uses the concepts explained in 07-dict
 # by using a class as a "value" field within a dict
 
 # a way to represent more information about a contact
@@ -45,9 +45,11 @@ def advanced_contacts():
     contacts["Greta"] = Contact("Greta", "922-3642")
     
     # dict.get(key) is an alternative way to access elements
+    # it is useful to avoid the interpreter to generate an
+    # exception when a given key doesn't exist
     
-    # because dict's values have "datatype" Contact
-    # you can access the fields of Contacts after using dict.get
+    # because dict's values are instances of Contact class
+    # you can access the fields of Contact after using dict.get
     # and perform some updates directly into the dictionary
     contacts.get("Beatrice").email = "supplychain@biz.com"
     contacts.get("Beatrice").website = "https://biz.com/customers"

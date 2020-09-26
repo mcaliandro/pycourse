@@ -10,19 +10,19 @@
 # you have to fix this script and try to improve it by using some of the tricks you learnt
 
 # sum
-def SUM(a, b):
+def sum(a, b):
     return a+b
 
 # subtraction
-def SUB(a, b):
+def sub(a, b):
     return a-b
 
 # multiplication
-def MUL(a, b):
+def mul(a, b):
     return a*b
 
 # division
-def DIV(a, b):
+def div(a, b):
     return a/b
 
 def print_menu():
@@ -36,25 +36,25 @@ def print_menu():
 quit = False
 
 # while quit is False
-while (not quit):
+while not quit:
     print_menu()
     operation = input("Your choice: ")
     if (operation == "a"):
         a = input("a = ")
         b = input("b = ")
-        print("{} + {} = {}".format(a, b, SUM(a, b)))
+        print("{} + {} = {}".format(a, b, sum(a, b)))
     elif (operation == "b"):
         a = input("a = ")
         b = input("b = ")
-        print("{} - {} = {}".format(a, b, SUB(a, b)))
+        print("{} - {} = {}".format(a, b, sub(a, b)))
     elif (operation == "c"):
         a = input("a = ")
         b = input("b = ")
-        print("{0} x {1} = {2}".format(a, b, MUL(a, b)))
+        print("{0} x {1} = {2}".format(a, b, mul(a, b)))
     elif (operation == "d"):
         a = input("a = ")
         b = input("b = ")
-        print("{0} : {1} = {2}".format(a, b, DIV(a, b)))
+        print("{0} : {1} = {2}".format(a, b, div(a, b)))
     elif (operation == "e"):
         quit = True
     else:
